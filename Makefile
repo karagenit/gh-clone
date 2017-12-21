@@ -1,7 +1,10 @@
+SCRIPT=script.sh
+INSTALL=/usr/local/bin/gh-clone
+
 main: install
 
 install:
-	sudo cp script.sh /usr/bin/gh-clone
+	cp $(SCRIPT) $(INSTALL)
 
 uninstall:
-	sudo rm /usr/bin/gh-clone
+	rm $(INSTALL)
